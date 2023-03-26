@@ -1,13 +1,20 @@
-.body {
-    background-color: rgb(182, 160, 132);
-
-}
-
-h1 {
-    font-size: larger;
+body {
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .new-book {
+    display: flex;
     justify-content: center;
     align-items: center;
+    padding: 100px;
+}
+
+.header {
+  display: flex;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.navbar {
+  height: 200px;
 }
