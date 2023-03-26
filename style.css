@@ -6,3 +6,8 @@
 h1 {
     font-size: larger;
 }
+
+.new-book {
+    justify-content: center;
+    align-items: center;
+}
