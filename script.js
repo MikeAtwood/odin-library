@@ -1,5 +1,10 @@
 let myLibrary = [];
 
+const newBook = document.querySelector(".new-book")
+
+$(document).ready(function(){
+    $("#myModal").modal()
+});
 
 class Book {
     // the constructor
