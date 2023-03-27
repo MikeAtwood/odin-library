@@ -1,13 +1,13 @@
 let myLibrary = [];
 
 const newBook = document.querySelector(".new-book")
+const myModal = document.querySelector("#myModal")
+const MyBtn = document.querySelector("#myBtn")
 
-$(document).ready(function(){
-    $("#myModal").modal()
-});
+MyBtn.onclick = () => myModal.style.display = "block";
 
-class Book {
-    // the constructor
+// constructor
+class Book { 
     constructor(author, title, pages){
         this.author = author
         this.title = title
@@ -15,6 +15,8 @@ class Book {
     }
 }
 
+// This takes Book constructor
+// Allows modal to create a new card to display on page
 
 function addBookToLibrary() {
     // do stuff here
