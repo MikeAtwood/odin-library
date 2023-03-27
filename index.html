@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="./favicon/books.png" />
     <title>Odin Library</title>
 </head>
 
@@ -34,13 +35,41 @@
 
                 <!-- Modal Body -->
                 <div class="modal-body">
-                    Modal body text goes here.
+                    <form class="add-book-form" id="addBookForm">
+                        <label for="title"></label>
+                        <input
+                        type="text"
+                        id="title"
+                        name="title"
+                        placeholder="Book Title"
+                        autocomplete="off"
+                        required
+                        /><br />
+                        <label for="author"></label>
+                        <input
+                        type="text"
+                        id="author"
+                        name="author"
+                        placeholder="Author"
+                        autocomplete="off"
+                        required
+                        /><br />
+                        <label for="pages"></label>
+                        <input
+                        type="text"
+                        id="pages"
+                        name="pages"
+                        placeholder="Pages"
+                        autocomplete="off"
+                        required
+                        /><br />
+                    </form>
                 </div>
 
                 <!-- Modal Footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dimiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Add</button>
+                    
+                    <button type="button" id="add-btn" class="btn btn-primary btn-lg">Add</button>
                 </div>
 
             </div>

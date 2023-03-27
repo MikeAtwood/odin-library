@@ -3,8 +3,12 @@ let myLibrary = [];
 const newBook = document.querySelector(".new-book")
 const myModal = document.querySelector("#myModal")
 const MyBtn = document.querySelector("#myBtn")
+const AddBtn = document.querySelector("#add-btn")
 
 MyBtn.onclick = () => myModal.style.display = "block";
+AddBtn.onclick = function() {
+
+}
 
 // constructor
 class Book { 
@@ -20,4 +24,12 @@ class Book {
 
 function addBookToLibrary() {
     // do stuff here
+    myLibrary.push(Book)
 }
+
+const theHobbit = new Book(
+    this.author = "J.R.R Tolkien",
+    this.title = "The Hobbit",
+    this.pages = 304
+)
+console.dir(theHobbit)
