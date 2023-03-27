@@ -6,9 +6,8 @@ const MyBtn = document.querySelector("#myBtn")
 const AddBtn = document.querySelector("#add-btn")
 
 MyBtn.onclick = () => myModal.style.display = "block";
-AddBtn.onclick = function() {
+AddBtn.onclick = () => addBookToLibrary.style.display = "block"
 
-}
 
 // constructor
 class Book { 
