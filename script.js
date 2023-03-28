@@ -27,9 +27,9 @@ newBookBtn.addEventListener('click', () => {
 
 // Constructor
 class Book {
-    constructor(author, title, pages) {
-        this.author = author;
+    constructor(title, author, pages) {
         this.title = title;
+        this.author = author;
         this.pages = pages;
     }
 }
