@@ -27,12 +27,17 @@ newBookBtn.addEventListener('click', () => {
 
 // Constructor
 class Book {
-    constructor(title, author, pages) {
+    constructor(title, author, pages, read) {
         this.title = title;
         this.author = author;
         this.pages = pages;
+        this.read = read;
+    }
+    toggleRead() {
+        this.read = !this.read;
     }
 }
+
 
 // This takes Book constructor
 // Allows modal to create a new card to display on page
@@ -40,7 +45,8 @@ class Book {
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
     const pages = document.getElementById('pages').value;
-    const newBook = new Book(title, author, pages);
+    const read = false;
+    const newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
 };
 
@@ -56,12 +62,19 @@ function renderBooks() {
         const authorElement = document.createElement('p');
         authorElement.textContent = book.author;
         const pagesElement = document.createElement('p');
-        pagesElement.textContent = book.pages;
-
+        pagesElement.textContent = "Pages: " + book.pages;
+        const readBtn = document.createElement('button')
+        readBtn.textContent = book.read ? "Read" : "Not Read";
+        readBtn.classList.add(book.read ? "read" : "not-read");
+        readBtn.addEventListener("click", () => {
+            book.toggleRead();
+            renderBooks();
+        });
+        
         bookElement.appendChild(titleElement);
         bookElement.appendChild(authorElement);
         bookElement.appendChild(pagesElement);
-        console.log(bookElement)
+        bookElement.appendChild(readBtn);
         bookContainer.appendChild(bookElement);
     });
 }

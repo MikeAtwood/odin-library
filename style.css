@@ -34,6 +34,7 @@ input {
   text-align: center;
   box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
   transform: scale(0.8, 0.9);
+  position: relative;
 }
 
 #book-container {
@@ -68,4 +69,32 @@ input {
 #footer img {
   max-height: auto;
   max-width: 30px;
+}
+
+#book-container button.read {
+  background-color: #4Caf50;
+  color: white;
+}
+
+#book-container button.not-read {
+  background-color: #f44336;
+  color: white;
+}
+
+.book button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+  transition: all 0,3s ease;
+}
+
+.book button:hover {
+  background-color: #3e8e41;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
 }
