@@ -23,15 +23,12 @@ input {
   height: 50px;
 }
 
-div#book-container {
-  display: block;
-  margin: 0 auto;
-  padding: 10px;
-
-}
-
 .book {
   border: 1px solid black;
-  display: block;
-  margin: 0 auto;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
 }
