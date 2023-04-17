@@ -98,3 +98,13 @@ input {
   background-color: #3e8e41;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
 }
+
+/* Login */
+.login {
+  color: white;
+  background-color: #3e8e41;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  margin-right: 30px;
+}
