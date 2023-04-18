@@ -16,10 +16,23 @@
         <div class="header container-fluid" style="color: white;">
             <p>Odin Library.</p>
         </div>
-        <div>
-            <button class="login">Login</button>
-        </div>
+            <button type="button" class="btn btn-primary" id="login" data-toggle="modal" data-target="#loginModal">
+                Login
+            </button>
     </nav>
+    <div id="login-modal" class="modal">
+        <div class="input-modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form" action="/login" method="post">
+                <label for="username"></label>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Password" autocomplete="off" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" id="new-book" data-toggle="modal" data-target="#myModal">
@@ -58,9 +71,6 @@
                     <button type="submit" id="add-btn" class="btn btn-primary"
                         style="font-size: large; padding: 10px 40px;">Add</button>
                 </div>
-
-
-
             </div>
         </div>
     </div>
@@ -75,7 +85,7 @@
         </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script type="module" src="./script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

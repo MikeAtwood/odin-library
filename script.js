@@ -88,3 +88,41 @@ function showModal() {
     const modal = document.getElementById('modal')
     modal.style.display = 'block';
 }
+
+
+//-------- Login function --------//
+const loginButton = document.getElementById('login')
+const loginModal = document.querySelector('#login-modal')
+const closeButton = loginModal.querySelector('.close')
+const userName = document.getElementById('username')
+const passwordInput = document.getElementById('password')
+const loginForm = document.querySelector("#login-form")
+
+loginButton.addEventListener('click', () => {
+    loginModal.style.display = 'block'
+})
+
+closeButton.addEventListener("click", () => {
+    loginModal.style.display = 'none'
+})
+
+loginForm.addEventListener('submit', (event) => {
+    const usernameValue = userName.value.trim();
+    const passwordValue = passwordInput.value.trim();
+    const hasNumber = /\d/.test(passwordValue);
+    const hasSpecialChar = /[!@#$%^&*]/.test(passwordValue);
+  
+    if (usernameValue.length < 5 && usernameValue.length > 15) {
+      event.preventDefault();
+      userName.setCustomValidity('Username must be between 5 and 15 characters');
+      userName.reportValidity();
+    } else if (passwordValue.length < 8 && !hasNumber && !hasSpecialChar) {
+      event.preventDefault();
+      passwordInput.setCustomValidity('Password must contain at least 8 characters, one numerical character, and one special character');
+      passwordInput.reportValidity();
+    } else {
+        event.preventDefault()
+        loginModal.style.display = 'none'
+        window.location.href = '/index.html'
+    }
+  });
